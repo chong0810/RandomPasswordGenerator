@@ -8,6 +8,8 @@ function RPG() {
 
     } 
 
+    let alphabet = "abcdefghijklmnopqrstuvwxyz" ;
+
 
 
 
