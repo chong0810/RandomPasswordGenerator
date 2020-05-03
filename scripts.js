@@ -12,7 +12,9 @@ function RPG() {
 
     let lowerCase = praseInt(prompt("Do you want lower case? Yes: 1  No: 2"));
 
-        
+    let upperCase = praseInt(prompt("Do you want upper case? Yes: 1  No: 2"));
+
+
 
 
 
