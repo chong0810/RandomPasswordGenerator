@@ -14,6 +14,7 @@ function RPG() {
 
     let upperCase = praseInt(prompt("Do you want upper case? Yes: 1  No: 2"));
 
+    let numbers = praseInt(prompt("Do you want numbers? Yes: 1  No: 2"));
 
 
 
