@@ -16,7 +16,7 @@ function RPG() {
 
     let numbers = praseInt(prompt("Do you want numbers? Yes: 1  No: 2"));
 
-
+    let specials = praseInt(prompt("Do you want special characters? Yes: 1  No: 2"));
 
 
 
