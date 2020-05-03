@@ -10,6 +10,10 @@ function RPG() {
 
     let alphabet = "abcdefghijklmnopqrstuvwxyz" ;
 
+    let lowerCase = praseInt(prompt("Do you want lower case? Yes: 1  No: 2"));
+
+        
+
 
 
 
