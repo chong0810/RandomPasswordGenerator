@@ -18,7 +18,10 @@ function RPG() {
 
     let specials = praseInt(prompt("Do you want special characters? Yes: 1  No: 2"));
 
-    let array=[];
+    let arrayItemCount = 0;
+    let arrayStorage=[];
+    let arrayDisplay=[];
+    let randomChar;
     let char;
     let pwdnum;
     let specialChar;
@@ -35,17 +38,18 @@ function RPG() {
             let decision = Math.floor(Math.random());
 
             if (decision === 1) {
-                char = char.upperCase
+                char = char.upperCase;
             }
 
             
         }
-
+        arrayStorage[arrayItemCount.length] = char;
     }
     // random number
     if (numbers === 1) {
 
         pwdnum = Math.floor(Math.random()*10);
+        arrayStorage[arrayItemCount.length] = pwdnum;
     }
 
     // Random Special Character 
@@ -56,7 +60,13 @@ function RPG() {
 
         specialChar = specialCharacter[Math.floor(Math.random()*specialCharacter.length)] ;
 
+        arrayStorage[arrayItemCount.length] = specialChar;
+
     }
+
+    randomchar = arrayStorage[Math.floor(Math.random().arrayItemCount.length)];
+
+    
 
 
 
