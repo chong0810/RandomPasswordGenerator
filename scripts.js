@@ -18,7 +18,7 @@ function RPG() {
 
     let specials = praseInt(prompt("Do you want special characters? Yes: 1  No: 2"));
 
-
+    let array=[];
     let char;
     let pwdnum;
     let specialChar;
