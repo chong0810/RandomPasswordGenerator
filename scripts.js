@@ -19,7 +19,8 @@ function RPG() {
     let specials = praseInt(prompt("Do you want special characters? Yes: 1  No: 2"));
 
     let char;
-    // alphabet selection
+    let pwdnum;
+    // Random alphabet selection
 
     if (lowercase === 1 || upperCase === 1) {
         char = alphabet[Math.floor(Math.random()*alphabet.length)];
@@ -39,7 +40,11 @@ function RPG() {
         }
 
     }
-    
+    // random number
+    if (numbers === 1) {
+
+        pwdnum = Math.floor(Math.random()*10);
+    }
 
 
 
