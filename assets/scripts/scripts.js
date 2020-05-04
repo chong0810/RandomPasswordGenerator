@@ -14,53 +14,61 @@ function RPG() {
     let lowerCase, upperCase, numbers, specials; 
 
     do {
+    lowerCase = confirm("Do you want lower case?");
+    upperCase = confirm("Do you want Upper case?");
+    numbers = confirm("Do you want numbers?");
+    specials = confirm("Do you want special characters?");
+    } while (lowerCase == false && upperCase == false && numbers == false && specials == false)
+
+    // do {
         
-        do {
-            lowerCase = parseInt(prompt("Do you want lower case? Yes: 1  No: 2"));
-            // validation for user input
-        } while (lowerCase != 1 && lowerCase != 2 || isNaN(lowerCase))
+    //     do {
+    //         lowerCase = parseInt(prompt("Do you want lower case? Yes: 1  No: 2"));
+    //         // validation for user input
+    //     } while (lowerCase != 1 && lowerCase != 2 || isNaN(lowerCase))
 
 
 
-        do {
-            upperCase = parseInt(prompt("Do you want upper case? Yes: 1  No: 2"));
-            // validation for user input
-        } while (upperCase != 1 && upperCase != 2 || isNaN(upperCase))
+    //     do {
+    //         upperCase = parseInt(prompt("Do you want upper case? Yes: 1  No: 2"));
+    //         // validation for user input
+    //     } while (upperCase != 1 && upperCase != 2 || isNaN(upperCase))
 
 
-        do {
-            numbers = parseInt(prompt("Do you want numbers? Yes: 1  No: 2"));
-            // validation for user input
-        } while (numbers != 1 && numbers != 2 || isNaN(numbers))
+    //     do {
+    //         numbers = parseInt(prompt("Do you want numbers? Yes: 1  No: 2"));
+    //         // validation for user input
+    //     } while (numbers != 1 && numbers != 2 || isNaN(numbers))
 
-        do {
-            specials = parseInt(prompt("Do you want special characters? Yes: 1  No: 2"));
-            // validation for user input
-        } while (specials != 1 && specials != 2 || isNaN(specials))
+    //     do {
+    //         specials = parseInt(prompt("Do you want special characters? Yes: 1  No: 2"));
+    //         // validation for user input
+    //     } while (specials != 1 && specials != 2 || isNaN(specials))
 
-    if (lowerCase === 2 && upperCase === 2 && numbers === 2 && specials === 2) {
+    // if (lowerCase === 2 && upperCase === 2 && numbers === 2 && specials === 2) {
         
-        // user needs to choose at least one category
-        alert ("Please choose at least one category.")
-    }
+    //     // user needs to choose at least one category
+    //     alert ("Please choose at least one category.")
+    // }
 
-    } while (lowerCase ===2 && upperCase === 2 && numbers === 2 && specials === 2)
-    // validation for user input
+    // } while (lowerCase ===2 && upperCase === 2 && numbers === 2 && specials === 2)
+    // // validation for user input
 
+    
 
     let arrayStorage=[];
     let arrayDisplay=[];
     let char;
     let pwdnum;
     let specialChar;
-    let alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+    let alphabet = "abcdefghijklmnopqrstuvwxyz"
 
     for (let i = 0; i < pwdlength ; i++) {
 
     // Random alphabet selection
         let j = 0;
 
-    if (lowerCase === 1 || upperCase === 1) {
+    if (lowerCase === true || upperCase === true) {
         char = alphabet[Math.floor(Math.random()*alphabet.length)];
         
         
@@ -69,7 +77,7 @@ function RPG() {
             char = char.toUpperCase();
         }
 
-        if (lowerCase === 1 && upperCase === 1) {
+        if (lowerCase === true && upperCase === true) {
             let decision = Math.floor(Math.random()*2);
 
             if (decision === 1) {
@@ -90,7 +98,7 @@ function RPG() {
         
     }
     // random number
-    if (numbers === 1) {
+    if (numbers === true) {
 
         pwdnum = Math.floor(Math.random()*10);
         // alert("number is: " + pwdnum);
@@ -110,7 +118,7 @@ function RPG() {
 
     // Random Special Character 
 
-    if (specials === 1) {
+    if (specials === true) {
 
         let specialCharacter = " !”#$%&’()*+,-./:;<=>?@[\]^_`{|}~";
 
