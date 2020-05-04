@@ -1,40 +1,51 @@
+// making a function that will be invoked from HTML
 function RPG() {
 
+    // limiter
     let pwdlength = parseInt(prompt("How long do you want your password to be? Min 8 - Max 128"));
 
+    // validation for user input
     while (pwdlength > 129 || pwdlength < 8 || isNaN(pwdlength)) {
         
         pwdlength=parseInt(prompt("Please choose password length from 8 to 128"));
 
     } 
-
+    // initializing variables
     let lowerCase, upperCase, numbers, specials; 
 
     do {
-
+        
         do {
             lowerCase = parseInt(prompt("Do you want lower case? Yes: 1  No: 2"));
+            // validation for user input
         } while (lowerCase != 1 && lowerCase != 2 || isNaN(lowerCase))
+
+
 
         do {
             upperCase = parseInt(prompt("Do you want upper case? Yes: 1  No: 2"));
+            // validation for user input
         } while (upperCase != 1 && upperCase != 2 || isNaN(upperCase))
 
 
         do {
             numbers = parseInt(prompt("Do you want numbers? Yes: 1  No: 2"));
+            // validation for user input
         } while (numbers != 1 && numbers != 2 || isNaN(numbers))
 
         do {
             specials = parseInt(prompt("Do you want special characters? Yes: 1  No: 2"));
+            // validation for user input
         } while (specials != 1 && specials != 2 || isNaN(specials))
 
     if (lowerCase === 2 && upperCase === 2 && numbers === 2 && specials === 2) {
-
+        
+        // user needs to choose at least one category
         alert ("Please choose at least one category.")
     }
 
     } while (lowerCase ===2 && upperCase === 2 && numbers === 2 && specials === 2)
+    // validation for user input
 
 
     let arrayStorage=[];
@@ -133,7 +144,7 @@ function RPG() {
 }
 
 
-
+// returning string to HTML
 document.getElementById("Password").innerHTML = "This is your password: " + arrayDisplay.join("");
 
 
