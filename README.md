@@ -7,7 +7,7 @@ With the user's choice/choices, the javascript with display a random password to
 
 This project has taught me how to manipulate functions and variables, change the scopes of the variables, and how to chain multiple condition statements.
 
-<img src="assets/images/rpgImages.JPG" width="100" >
+<img src="assets/images/rpgImage.JPG" width="100" alt="Random Password Generator Site Picture" >
 
 
 https://chong0810.github.io/RandomPasswordGenerator/
