@@ -26,3 +26,9 @@ body {
 .margin {
     margin-top: 70pt;
 }
+
+.whiteBox {
+
+    background-color: white;
+    border-radius: 10px;
+}
