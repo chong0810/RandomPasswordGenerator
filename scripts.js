@@ -8,48 +8,74 @@ function RPG() {
 
     } 
 
-    let alphabet = "abcdefghijklmnopqrstuvwxyz" ;
+    let alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
-    let lowerCase = praseInt(prompt("Do you want lower case? Yes: 1  No: 2"));
+    let lowerCase = parseInt(prompt("Do you want lower case? Yes: 1  No: 2"));
 
-    let upperCase = praseInt(prompt("Do you want upper case? Yes: 1  No: 2"));
+    let upperCase = parseInt(prompt("Do you want upper case? Yes: 1  No: 2"));
 
-    let numbers = praseInt(prompt("Do you want numbers? Yes: 1  No: 2"));
+    let numbers = parseInt(prompt("Do you want numbers? Yes: 1  No: 2"));
 
-    let specials = praseInt(prompt("Do you want special characters? Yes: 1  No: 2"));
+    let specials = parseInt(prompt("Do you want special characters? Yes: 1  No: 2"));
 
-    let arrayItemCount = 0;
+
     let arrayStorage=[];
     let arrayDisplay=[];
-    let randomChar;
     let char;
     let pwdnum;
     let specialChar;
-    // Random alphabet selection
 
-    if (lowercase === 1 || upperCase === 1) {
+    for (let i = 0; i < pwdlength ; i++) {
+
+    // Random alphabet selection
+        let j = 0;
+
+    if (lowerCase === 1 || upperCase === 1) {
         char = alphabet[Math.floor(Math.random()*alphabet.length)];
-    
+        
+        
+
         if (lowerCase === 2) {
-            char = char.upperCase;
+            char = char.toUpperCase();
         }
 
         if (lowerCase === 1 && upperCase === 1) {
             let decision = Math.floor(Math.random());
 
             if (decision === 1) {
-                char = char.upperCase;
+                char = char.toUpperCase();
             }
 
             
         }
-        arrayStorage[arrayItemCount.length] = char;
+
+        alert("This is the letter: " + char);
+        
+        alert("This is alphabet count: " + j);
+
+        arrayStorage[j] = char;
+        j++;
+        
+        
+        
     }
     // random number
     if (numbers === 1) {
 
         pwdnum = Math.floor(Math.random()*10);
-        arrayStorage[arrayItemCount.length] = pwdnum;
+        alert("number is: " + pwdnum);
+
+        alert("This is number count: " + j);
+
+            arrayStorage[j] = pwdnum;
+            j++;
+       
+
+        
+        alert("This is number count after +1: " + j);
+
+        
+
     }
 
     // Random Special Character 
@@ -60,16 +86,34 @@ function RPG() {
 
         specialChar = specialCharacter[Math.floor(Math.random()*specialCharacter.length)] ;
 
-        arrayStorage[arrayItemCount.length] = specialChar;
+        alert("Special Character: " + specialChar);
+
+        alert("This is specialChar count: " + j);
+
+
+        
+           
+            arrayStorage[j] = specialChar;
+            j++;
+
+
+         alert("This is specialChar count +1: " + j);
+        
 
     }
+    if (j=0) {
+        arrayDisplay[i] = arrayStorage[j];
+    } else {
+        arrayDisplay[i] = arrayStorage[Math.floor(Math.random()*j)];
+    }
 
-    randomchar = arrayStorage[Math.floor(Math.random().arrayItemCount.length)];
+    alert("character at: " + i + " is " + arrayDisplay[i]);
+    alert("End Count: " + j);
 
-    
+}
 
 
-
+alert("This is your Password: " + arrayDisplay);
 
 
 
