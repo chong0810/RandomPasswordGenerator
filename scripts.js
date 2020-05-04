@@ -40,7 +40,7 @@ function RPG() {
         }
 
         if (lowerCase === 1 && upperCase === 1) {
-            let decision = Math.floor(Math.random());
+            let decision = Math.floor(Math.random()*2);
 
             if (decision === 1) {
                 char = char.toUpperCase();
@@ -49,9 +49,9 @@ function RPG() {
             
         }
 
-        alert("This is the letter: " + char);
+        // alert("This is the letter: " + char);
         
-        alert("This is alphabet count: " + j);
+        // alert("This is alphabet count: " + j);
 
         arrayStorage[j] = char;
         j++;
@@ -63,16 +63,16 @@ function RPG() {
     if (numbers === 1) {
 
         pwdnum = Math.floor(Math.random()*10);
-        alert("number is: " + pwdnum);
+        // alert("number is: " + pwdnum);
 
-        alert("This is number count: " + j);
+        // alert("This is number count: " + j);
 
             arrayStorage[j] = pwdnum;
             j++;
        
 
         
-        alert("This is number count after +1: " + j);
+        // alert("This is number count after +1: " + j);
 
         
 
@@ -86,9 +86,9 @@ function RPG() {
 
         specialChar = specialCharacter[Math.floor(Math.random()*specialCharacter.length)] ;
 
-        alert("Special Character: " + specialChar);
+        // alert("Special Character: " + specialChar);
 
-        alert("This is specialChar count: " + j);
+        // alert("This is specialChar count: " + j);
 
 
         
@@ -97,23 +97,24 @@ function RPG() {
             j++;
 
 
-         alert("This is specialChar count +1: " + j);
+        //  alert("This is specialChar count +1: " + j);
         
 
     }
-    if (j=0) {
+    if (j<=1) {
+        j--;
         arrayDisplay[i] = arrayStorage[j];
     } else {
         arrayDisplay[i] = arrayStorage[Math.floor(Math.random()*j)];
     }
 
-    alert("character at: " + i + " is " + arrayDisplay[i]);
-    alert("End Count: " + j);
+    // alert("character at: " + i + " is " + arrayDisplay[i]);
+    // alert("End Count: " + j);
 
 }
 
 
-alert("This is your Password: " + arrayDisplay);
+alert("This is your password: " + arrayDisplay.join(""));
 
 
 
