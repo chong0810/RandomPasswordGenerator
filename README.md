@@ -1,15 +1,10 @@
 # RandomPasswordGenerator
-This is a Random Password Generator Project.
+This is a Random Password Generator Project that the javascript will generate a random password for a user.
 
-It will generate a random password for user.
+It will ask the user to choose which characters does he or she wants. While the user chooes, the user's answer will be validated each time to make sure the user is giving the right input.
 
-It will ask the user to choose which criteria what he or she wants in the password.
+With the user's choice/choices, the javascript with display a random password to the HTML page where user can see.
 
-It will valdiate user's answers on the prompts.
+This project has taught me how to manipulate functions and variables, change the scopes of the variables, and how to chain multiple condition statements.
 
-With the selections, it will generate a random password.
-
-It will display its result on HTML page. 
-
-Please leave a feedback.
 
