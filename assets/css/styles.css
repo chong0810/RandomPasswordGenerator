@@ -11,3 +11,9 @@
 body {
     background-color: lemonchiffon;
 }
+
+
+.rImage {
+    max-width: 450px;
+    height: auto;
+}
