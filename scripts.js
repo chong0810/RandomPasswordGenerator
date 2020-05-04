@@ -2,21 +2,39 @@ function RPG() {
 
     let pwdlength = parseInt(prompt("How long do you want your password to be? Min 8 - Max 128"));
 
-    while (pwdlength > 129 || pwdlength < 8) {
+    while (pwdlength > 129 || pwdlength < 8 || isNaN(pwdlength)) {
         
         pwdlength=parseInt(prompt("Please choose password length from 8 to 128"));
 
     } 
 
-    let alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+    let lowerCase, upperCase, numbers, specials; 
 
-    let lowerCase = parseInt(prompt("Do you want lower case? Yes: 1  No: 2"));
+    do {
 
-    let upperCase = parseInt(prompt("Do you want upper case? Yes: 1  No: 2"));
+        do {
+            lowerCase = parseInt(prompt("Do you want lower case? Yes: 1  No: 2"));
+        } while (lowerCase != 1 && lowerCase != 2 || isNaN(lowerCase))
 
-    let numbers = parseInt(prompt("Do you want numbers? Yes: 1  No: 2"));
+        do {
+            upperCase = parseInt(prompt("Do you want upper case? Yes: 1  No: 2"));
+        } while (upperCase != 1 && upperCase != 2 || isNaN(upperCase))
 
-    let specials = parseInt(prompt("Do you want special characters? Yes: 1  No: 2"));
+
+        do {
+            numbers = parseInt(prompt("Do you want numbers? Yes: 1  No: 2"));
+        } while (numbers != 1 && numbers != 2 || isNaN(numbers))
+
+        do {
+            specials = parseInt(prompt("Do you want special characters? Yes: 1  No: 2"));
+        } while (specials != 1 && specials != 2 || isNaN(specials))
+
+    if (lowerCase === 2 && upperCase === 2 && numbers === 2 && specials === 2) {
+
+        alert ("Please choose at least one category.")
+    }
+
+    } while (lowerCase ===2 && upperCase === 2 && numbers === 2 && specials === 2)
 
 
     let arrayStorage=[];
@@ -24,6 +42,7 @@ function RPG() {
     let char;
     let pwdnum;
     let specialChar;
+    let alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
     for (let i = 0; i < pwdlength ; i++) {
 
