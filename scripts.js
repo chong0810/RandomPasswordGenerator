@@ -133,7 +133,8 @@ function RPG() {
 }
 
 
-alert("This is your password: " + arrayDisplay.join(""));
+
+document.getElementById("Password").innerHTML = "This is your password: " + arrayDisplay.join("");
 
 
 
