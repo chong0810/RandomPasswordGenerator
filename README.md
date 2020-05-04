@@ -11,5 +11,5 @@ With the selections, it will generate a random password.
 
 It will display its result on HTML page. 
 
-Please leave a feeedback.
+Please leave a feedback.
 
