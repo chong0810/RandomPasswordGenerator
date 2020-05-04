@@ -18,8 +18,10 @@ function RPG() {
 
     let specials = praseInt(prompt("Do you want special characters? Yes: 1  No: 2"));
 
+
     let char;
     let pwdnum;
+    let specialChar;
     // Random alphabet selection
 
     if (lowercase === 1 || upperCase === 1) {
@@ -46,7 +48,15 @@ function RPG() {
         pwdnum = Math.floor(Math.random()*10);
     }
 
+    // Random Special Character 
 
+    if (specials === 1) {
+
+        let specialCharacter = " !”#$%&’()*+,-./:;<=>?@[\]^_`{|}~";
+
+        specialChar = specialCharacter[Math.floor(Math.random()*specialCharacter.length)] ;
+
+    }
 
 
 
